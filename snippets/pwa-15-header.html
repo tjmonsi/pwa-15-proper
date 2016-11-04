@@ -1,0 +1,30 @@
+      <firebase-auth id="auth" user="{{user}}" provider="google" on-error="handleError">
+      </firebase-auth>
+  
+
+          <template is="dom-if" if="[[user]]">
+            <paper-button on-tap="logout">Logout</paper-button>
+          </template>
+          <template is="dom-if" if="[[!user]]">
+            <paper-button on-tap="login">Login</paper-button>
+          </template>
+
+      
+      <paper-toast id="toaster"></paper-toast>
+      
+      <script>
+        
+      
+      login: function() {
+        this.$$('#auth').signInWithPopup().then((result) => {
+          this.$$('#toaster').show('Hello ' + result.user.displayName);
+        });
+      },
+      
+      logout: function() {
+        this.$$('#auth').signOut().then(() => {
+          this.$.toaster.show('Goodbye!')
+        })
+      }
+      
+      </script>

@@ -1,0 +1,23 @@
+    <firebase-document
+      path="/articles/[[articleId]]"
+      data="{{article}}"
+    ></firebase-document>
+    
+    <h1>[[article.title]]</h1>
+    <marked-element markdown="[[article.body]]">
+      <div class="markdown-html"></div>
+    </marked-element>
+    
+    <template is="dom-if" if="[[user]]">
+      <a href="/edit/[[articleId]]">
+        <paper-button>
+          Edit
+        </paper-button>
+      </a>
+    </template>
+    
+    <a href="/">
+      <paper-button>
+        Go Back
+      </paper-button>
+    </a>

@@ -1,0 +1,27 @@
+{
+  "article_list" : {
+    "article-1" : {
+      "value" : true
+    },
+    "article-2" : {
+      "value" : true
+    },
+    "article-3" : {
+      "value" : true
+    }
+  },
+  "articles" : {
+    "article-1" : {
+      "body" : "This is the body\n\nAnd I can type anything here\n\nSomething must be done here.",
+      "title" : "This is an Article. "
+    },
+    "article-2" : {
+      "body" : "this is the body of that article",
+      "title" : "This is another article"
+    },
+    "article-3" : {
+      "body" : "and yet another body",
+      "title" : "And yet another article"
+    }
+  }
+}

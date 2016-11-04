@@ -1,0 +1,19 @@
+    <template is="dom-if" if="[[user]]">
+      <firebase-document
+        path="/articles/[[articleId]]"
+        data="{{articleLive}}"
+      ></firebase-document>
+      
+      <app-indexeddb-mirror
+        key="article-[[articleId]]"
+        data="{{articleLive}}"
+        persisted-data="{{article}}">
+      </app-indexeddb-mirror>
+      
+      <paper-input value="{{article.title}}" label="Title"></paper-input>
+      <paper-textarea value="{{article.body}}" label="Body"></paper-textarea>
+      
+      <a href="/view/[[articleId]]">
+        <paper-button>Close</paper-button>        
+      </a>
+    </template>

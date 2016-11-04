@@ -1,0 +1,8 @@
+<firebase-query
+  path="/article_list"
+  data="{{articles}}"
+></firebase-query>
+
+<template is="dom-repeat" items="[[articles]]">
+  <pwa-15-summary article-id="[[item.$key]]"></pwa-15-summary>
+</template>

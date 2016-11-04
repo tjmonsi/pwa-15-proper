@@ -1,0 +1,9 @@
+    <firebase-app 
+      auth-domain="pwa-15-proper.firebaseapp.com"
+      database-url="https://pwa-15-proper.firebaseio.com"
+      api-key="AIzaSyB1WgnMXnfT9A1opXFa1q0N8jFa4PTqDTA">
+    </firebase-app>
+    
+        <home-page route="/" user="{{user}}"></home-page>
+        <edit-page route="/edit/:id" user="{{user}}" auth="[[user]]"></edit-page>
+        <view-page route="/view/:id" user="{{user}}"></view-page>

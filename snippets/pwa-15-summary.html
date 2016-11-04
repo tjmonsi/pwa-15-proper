@@ -1,0 +1,25 @@
+
+
+    <firebase-document
+      path="/articles/[[articleId]]/title"
+      data="{{title}}"
+    ></firebase-document>
+    
+    <template is="dom-if" if="[[title]]">
+      <paper-material>
+        <h2>
+          [[title]]
+        </h2>
+        
+        <a href="/view/[[articleId]]">
+          <paper-button raised>Read</paper-button>  
+        </a>
+        <template is="dom-if" if="[[user]]">
+          <a href="/edit/[[articleId]]">
+            <paper-button raised>Edit</paper-button>  
+          </a>  
+        </template>
+      </paper-material>  
+    </template>
+    
+
